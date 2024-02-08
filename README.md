@@ -1,32 +1,32 @@
 # SetLEDs Karabiner for Mac OS X
 
-This is for those who use Karabiner and want the _NumLk_ key on their keypad to not only remap the keys
-(which Karabiner can do) but also set the NumLk led correctly on the keyboard (which, as of this writing, Karbiner can't do).
+This is for those who use [Karabiner](https://karabiner-elements.pqrs.org/) and want the _Num Lock_ key on their keypad to not only remap the keys
+(which Karabiner can do) but also set the Num Lock led correctly on the keyboard (which, as of this writing, Karabiner can't do).
 # Overview
-To get this to work there is a script called setleds_karabiner.sh that can be run from Karabiner (or the command line for that matter).
-This script works be first selecting a profile in Karabiner that does not include any keyboards - you must define this yourself.
-Then it uses setleds to set the numlock led to the desired state. Then it sets the Karbiner profile back to whatever was
+To get this to work there is a script called _setleds_karabiner.sh_ that can be run from Karabiner (or the command line for that matter).
+This script works by first selecting a profile in Karabiner that does not include any keyboards - you must define this yourself.
+Then it uses [setleds](https://github.com/damieng/setledsmac) to set the numlock led to the desired state. Then it sets the Karabiner profile back to whatever was
 active when you ran the shell script.
 
 The script is fairly bullet-proof, e.g
 * It should work even if there are spaces in things like path names
 * If you run it with the wrong number of arguments it prints out a usage message
-* It checks that the 'no keyboard' profile you want it to use actually exists before it does anything
+* It checks that the 'no keyboard' profile you want to use actually exists before it does anything
 * It will keep trying the _setleds_ command until it either works or 2s have passed (there is a delay between
 when Karabiner returns from the set profile command and when it actually takes itself out of the way).
 # Installation
 Download the zip from the releases. It contains:
-* setleds binary
-* setleds_karabiner.sh
-* enable_numlock_toggle.json
-* numpad_keys.json
+* _setleds_ binary
+* _setleds_karabiner.sh_
+* _enable_numlock_toggle.json_
+* _numpad_keys.json_
 
 In no particular order:
 
-* Create a bin folder directly under your home directory and put both the _setleds_ binary and _setleds_karabiner.sh_ in it. If you don't do this you will have to edit enable_numlock_toggle.json and if setelds and setleds_karabiner.sh are in different directories, you will have to edit the shell script too.
-* Create a profile in Karabiner that does not contain any devices. Call it _No keyboard_. If you call it something else, you will have to edit enable_numlock_toggle.json.
-* Load enable_numlock_toggle.json as a complex rule in Karabiner. If you have already loaded 'Enable Num Lock Toggle', replace it with enable_numlock_toggle.json.
-* Optionally load numpad_keys.json as a complex rule. If you already have 'Numpad keys' installed, you can just use that. I only provide it so this zip is a one-stop-shop.
+* Create a folder called `bin` directly under your home directory and put both the `setleds` binary and `setleds_karabiner.sh` in it. If you don't do this you will have to edit `enable_numlock_toggle.json` and if setleds and setleds_karabiner.sh are in different directories, you will have to edit the shell script too.
+* Create a profile in Karabiner that does not contain any devices. Call it _No keyboard_. If you call it something else, you will have to edit `enable_numlock_toggle.json` to pass that profile name as a second argument to setleds_karabiner.sh.
+* Load `enable_numlock_toggle.json` as a complex rule in Karabiner. If you have already loaded 'Enable Num Lock Toggle', replace it with `enable_numlock_toggle.json`.
+* Optionally load `numpad_keys.json` as a complex rule - this is what remaps the keys. If you already have 'Numpad keys' installed, you can just use that. I only provide it so this zip is a one-stop-shop.
 * Read the Notes section below before you go hammering the numlock key - it will help avoid any issues.
 
 ## Notes
