@@ -1,0 +1,326 @@
+{
+    "description": "Numpad Keys",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_period",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "delete_forward"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_7",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "home"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_8",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "up_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_9",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "page_up"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_4",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_6",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_1",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "end"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_2",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "down_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_3",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "page_down"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_period",
+                "modifiers": {
+                    "mandatory": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "x",
+                    "modifiers": [
+                        "command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_0",
+                "modifiers": {
+                    "mandatory": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "v",
+                    "modifiers": [
+                        "command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_0",
+                "modifiers": {
+                    "mandatory": [
+                        "control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "c",
+                    "modifiers": [
+                        "command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_0"
+            },
+            "to": [
+                {
+                    "key_code": "vk_none"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "keypad_5"
+            },
+            "to": [
+                {
+                    "key_code": "vk_none"
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

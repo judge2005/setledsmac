@@ -1,0 +1,65 @@
+{
+    "description": "Enable Num Lock Toggle",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Set Numlock",
+            "from": {
+                "key_code": "keypad_num_lock",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "Num Lock",
+                        "value": 1
+                    }
+                },
+                {
+                    "shell_command": "~/bin/setleds_karabiner.sh +num"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "Num Lock",
+                    "type": "variable_unless",
+                    "value": 0
+                }
+            ],
+            "description": "Unset Numlock",
+            "from": {
+                "key_code": "keypad_num_lock",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "Num Lock",
+                        "value": 0
+                    }
+                },
+                {
+                    "shell_command": "~/bin/setleds_karabiner.sh -num"
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
