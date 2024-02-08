@@ -15,7 +15,7 @@ The script is fairly bullet-proof, e.g
 * It will keep trying the _setleds_ command until it either works or 2s have passed (there is a delay between
 when Karabiner returns from the set profile command and when it actually takes itself out of the way).
 # Installation
-Download the zip from the releases. It contains:
+Download the [setelds_karabiner.zip](https://github.com/judge2005/setledsmac/releases/download/v0.2/setleds_karabiner.zip) from [releases](https://github.com/judge2005/setledsmac/releases/tag/v0.2). It contains:
 * _setleds_ binary
 * _setleds_karabiner.sh_
 * _enable_numlock_toggle.json_
