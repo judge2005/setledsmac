@@ -27,7 +27,7 @@ void parseOptions(int argc, const char * argv[])
         exit(1);
     }
     
-    LedState changes[] = { NoChange, NoChange, NoChange, NoChange };
+    LedState changes[] = { NoChange, NoChange, NoChange, NoChange, NoChange, NoChange };
     
     bool nextIsName = false;
     
@@ -61,6 +61,22 @@ void parseOptions(int argc, const char * argv[])
         else if (strcasecmp(argv[i], "^scroll") == 0)
             changes[kHIDUsage_LED_ScrollLock] = Toggle;
 
+        // Scroll lock
+        else if (strcasecmp(argv[i], "+compose") == 0)
+            changes[kHIDUsage_LED_Compose] = On;
+        else if (strcasecmp(argv[i], "-compose") == 0)
+            changes[kHIDUsage_LED_Compose] = Off;
+        else if (strcasecmp(argv[i], "^compose") == 0)
+            changes[kHIDUsage_LED_Compose] = Toggle;
+
+        // Kana
+        else if (strcasecmp(argv[i], "+kana") == 0)
+            changes[kHIDUsage_LED_Kana] = On;
+        else if (strcasecmp(argv[i], "-kana") == 0)
+            changes[kHIDUsage_LED_Kana] = Off;
+        else if (strcasecmp(argv[i], "^kana") == 0)
+            changes[kHIDUsage_LED_Kana] = Toggle;
+
         else {
             if (nextIsName) {
                 nameMatch = argv[i];
@@ -79,7 +95,7 @@ void parseOptions(int argc, const char * argv[])
 
 void explainUsage(void)
 {
-    printf("Usage:\tsetleds [-v] [-name wildcard] [[+|-|^][ num | caps | scroll]]\n"
+    printf("Usage:\tsetleds [-v] [-name wildcard] [[+|-|^][ num | caps | scroll | compose | kana ]]\n"
            "Thus,\tsetleds +caps -num ^scroll\n"
            "will set CapsLock, clear NumLock and toggle ScrollLock.\n"
            "Any leds changed are reported for each keyboard.\n"

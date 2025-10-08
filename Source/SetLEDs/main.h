@@ -8,8 +8,8 @@
 
 #include <CoreFoundation/CoreFoundation.h>
 
-const int maxLeds = 3;
-const char* ledNames[] = { "num", "caps", "scroll" };
+const int maxLeds = 5;
+const char* ledNames[] = { "num", "caps", "scroll", "compose", "kana" };
 const char* stateSymbol[] = {"-", "+" };
 typedef enum { NoChange = -1, Off, On, Toggle } LedState;
 
