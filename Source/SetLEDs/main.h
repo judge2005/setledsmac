@@ -6,6 +6,8 @@
 #ifndef SetLEDs_main_h
 #define SetLEDs_main_h
 
+#include <stdbool.h>
+#include <IOKit/hid/IOHIDLib.h>
 #include <CoreFoundation/CoreFoundation.h>
 
 const int maxLeds = 5;
@@ -16,6 +18,7 @@ typedef enum { NoChange = -1, Off, On, Toggle } LedState;
 void parseOptions(int argc, const char * argv[]);
 void explainUsage(void);
 void setAllKeyboards(LedState changes[]);
+Boolean isKeyboardDevice(IOHIDDeviceRef device);
 CFMutableDictionaryRef getKeyboardDictionary(void);
 
 #endif
